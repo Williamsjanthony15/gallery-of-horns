@@ -1,10 +1,12 @@
 import React from 'react';
-import './App.css';
 
-class App extends React.Component{
+
+class Footer extends React.Component{
   render(){
-    return(<h1>hello world</h1>)
+    return(
+    <h2>Anthony Williams</h2>
+    )
   }
 }
 
-export default App;
+export default Footer;

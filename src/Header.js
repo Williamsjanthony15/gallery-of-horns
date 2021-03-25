@@ -1,10 +1,14 @@
 import React from 'react';
-import './App.css';
 
-class App extends React.Component{
+
+class Header extends React.Component{
   render(){
-    return(<h1>hello world</h1>)
+    return(
+    <header>
+      <h1>~!Horned Beast!~</h1>
+    </header>
+    )
   }
 }
 
-export default App;
+export default Header;
