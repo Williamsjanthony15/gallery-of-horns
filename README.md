@@ -71,15 +71,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-Number and name of feature: ________________________________
+Number and name of feature: lab 2 State and Props
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 4 hours
 
-Start time: _____
+Start time: 830pm
 
-Finish time: _____
-
-Actual time needed to complete: _____
+Finish time: 1230am
 
 
-Adding for Pushing purposes.
+Actual time needed to complete: 5 hours
+
