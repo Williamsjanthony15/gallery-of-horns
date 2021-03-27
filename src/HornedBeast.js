@@ -27,7 +27,6 @@ class HornedBeast extends React.Component {
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>
            {this.props.description}
-           {/* <div>{this.state.numberOfHearts}</div> */}
           </Card.Text>
           <Button onClick = {this.buttonClicked} variant = "secondary" size = "lg block">
           This is my favorite Horned Beast!
