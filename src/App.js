@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import data  from './data.json';
-
 import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
+import SelectedBeast from './SelectedBeasts';
 
+import data  from './data.json';
 
 class App extends React.Component{
   constructor(props) {
@@ -24,7 +24,11 @@ class App extends React.Component{
     })
   }
   
-  // hideBeastInModal = ()
+  hideBeastInModal = () => {
+    this.setState ({
+      show: false,
+    })
+  }
   
 
   render(){
@@ -35,9 +39,13 @@ class App extends React.Component{
         <Header />
         <Main 
           beasts = {data}
-          show = 
-        
+          handleClick = {this.showBeastInModal}
         />
+      <SelectedBeast
+        Show = {this.state.show}
+      hideBeast = {this.hideBeastInModal}
+      beast = {this.state.beast}
+      />
         <Footer />
       </>
     );
