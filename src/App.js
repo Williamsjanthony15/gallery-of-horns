@@ -12,6 +12,7 @@ class App extends React.Component{
     super(props);
     this.state = {
       show: 'false',
+      beastToRender: data,
       beast: {}
     }
     console.log('this is state -----', this.state);
@@ -30,7 +31,17 @@ class App extends React.Component{
     })
   }
   
+  handleFormSubmitted = event => {
+    event.preventDefault();
+    const horns = parseInt(event.target.value);
+//     console.log(horns);
+    let filteredBeastSubmitted = data.filter(beasts => beast.horns === horns);
+//     console.log(filteredBeastSubmitted);
+    this.setState({beastToRender: filteredBeastSubmitted})
+    
+  }
 
+  
   render(){
     console.log(this.state);
     return (
@@ -38,8 +49,9 @@ class App extends React.Component{
       <>
         <Header />
         <Main 
-          beasts = {data}
+          beasts = {this.state.beastToRender}
           handleClick = {this.showBeastInModal}
+          handleFormClick = {this.handleFormSubmitted}
         />
       <SelectedBeast
         Show = {this.state.show}
