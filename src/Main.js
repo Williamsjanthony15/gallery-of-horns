@@ -4,6 +4,7 @@ import CardColumns from 'react-bootstrap/CardColumns';
 import './Main.css';
 import { Form } from 'react-bootstrap';
 
+
 class Main extends React.Component {
   render() {
    let beastArray =  this.props.beasts.map((beast, index) => (
@@ -13,26 +14,30 @@ class Main extends React.Component {
         image_url = {beast.image_url}
         description = {beast.description}
         key = {index}
-        handleClick = {this.props.handleClick}
+
+        handleClick={this.props.handleClick}
       />
     ));
+
     return (
-      <>
-      <Form className="Form">
-        <Form.Group controlId="bootstrapName">
-          <Form.Label>Number of Horns</Form.label>
-            <Form.Control onInput = {this.props.handleFormSubmitted} as="select">
-             <option value="1">1 Horn</option>
-             <option value="2">2 Horn</option>
-             <option value="3">3 Horn</option>
-             <option value="100">100 Horn</option>
+
+      <main>
+        <Form className="Form">
+          <Form.Group controlId="BootStrapName">
+            <Form.Label>Number of Horns</Form.Label>
+            <Form.Control onInput={this.props.handleFormSubmitted} as="select">
+              <option value="1">1 horn</option>
+              <option value="2">2 Horns</option>
+              <option value="3">3 Horns</option>
+              <option value="100">100 Horns</option>
             </Form.Control>
-        </Form.Group>
-      </form>
+          </Form.Group>
+        </Form>
+
         <CardColumns>
-          {beastArray};
-      </CardColumns>
-      </>
+          {beastArray}
+        </CardColumns>
+      </main>
     )
   }
 }
