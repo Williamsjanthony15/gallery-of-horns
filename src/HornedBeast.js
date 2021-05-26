@@ -17,6 +17,11 @@ class HornedBeast extends React.Component {
     this.setState ({
       numberOfHearts: this.state.numberOfHeart +1
     });
+    this.props.handleClick({
+      title: this.props.title,
+      description: this.props.description,
+      image_url: this.props.image_url
+    })
     
   }
 
