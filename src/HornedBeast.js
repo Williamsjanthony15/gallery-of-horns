@@ -2,6 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 // import reactDom from 'react-dom';
+// Acting Parent
 
 class HornedBeast extends React.Component {
   constructor(props) {
@@ -14,8 +15,13 @@ class HornedBeast extends React.Component {
  
   buttonClicked = () => {
     this.setState ({
-      numberOfHearts: this.state.numberOfHearts + 1
+      numberOfHearts: this.state.numberOfHeart +1
     });
+    this.props.handleClick({
+      title: this.props.title,
+      description: this.props.description,
+      image_url: this.props.image_url
+    })
     
   }
 
