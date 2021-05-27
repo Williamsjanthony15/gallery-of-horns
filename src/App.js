@@ -6,6 +6,8 @@ import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
 
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -14,7 +16,7 @@ class App extends React.Component {
       renderBeast: data,
       beast: {}
     }
-    console.log('this is state -----', this.state);
+
   }
 
   showBeastInModal = (clickedBeast) => {
