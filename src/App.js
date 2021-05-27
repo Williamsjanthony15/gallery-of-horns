@@ -6,7 +6,6 @@ import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
