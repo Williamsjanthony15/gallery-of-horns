@@ -16,7 +16,6 @@ class App extends React.Component {
       renderBeast: data,
       beast: {}
     }
-
   }
 
   showBeastInModal = (clickedBeast) => {
@@ -37,9 +36,8 @@ class App extends React.Component {
     event.preventDefault();
     const horns = parseInt(event.target.value);
     let filteredBeastSubmitted = data.filter(beasts => beasts.horns === horns);
-    this.setState({renderBeast: filteredBeastSubmitted})
+    this.setState({ renderBeast: filteredBeastSubmitted })
   }
-
 
   render() {
     console.log(this.state);
@@ -51,11 +49,11 @@ class App extends React.Component {
           handleClick = {this.showBeastInModal}
           handleFormSubmitted={this.handleFormSubmitted}
         />
-        <SelectedBeast
+        <SelectedBeast    
           show={this.state.show}
           hideBeast={this.hideBeastInModal}
           beast={this.state.beast}
-          />
+        />
         <Footer />
       </div>
     );
